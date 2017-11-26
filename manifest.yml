@@ -1,0 +1,10 @@
+---
+applications:
+- name: batch-example
+  memory: 1G
+  random-route: true
+  path: build/libs/batch-example-0.0.1-SNAPSHOT.jar
+  no-hostname: true
+  no-route: true
+  health-check-type: none
+
