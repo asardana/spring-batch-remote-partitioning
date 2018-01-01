@@ -10,12 +10,14 @@ import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteExcep
 import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by Aman on 11/25/2017.
- */
+
+
+
 @Component
+@Profile("master")
 public class BatchCommandLineRunner implements CommandLineRunner {
 
     @Autowired

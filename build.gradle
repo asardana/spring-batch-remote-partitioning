@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.8.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '1.5.8.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'java'
@@ -20,13 +20,17 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-batch")
-	compile 'org.springframework.cloud:spring-cloud-starter-task:1.2.2.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-batch")
+    compile("org.springframework.batch:spring-batch-integration")
+    compile("org.springframework.integration:spring-integration-java-dsl:1.1.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-amqp")
+    compile("org.springframework.integration:spring-integration-amqp")
+    //compile 'org.springframework.cloud:spring-cloud-starter-task:1.2.2.RELEASE'
 
-	compile("org.hsqldb:hsqldb")
+    compile('mysql:mysql-connector-java:5.1.38')
 }

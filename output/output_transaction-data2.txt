@@ -1,0 +1,8 @@
+11,1001,Amazon,20
+12,1002,Walmart,30
+13,1002,Walmart,52
+14,1001,Amazon,46
+11,1001,Amazon,20
+12,1002,Walmart,30
+13,1002,Walmart,52
+14,1001,Amazon,46
